@@ -263,6 +263,7 @@ func (s *Sheet) makeXLSXSheet(refTable *RefTable, styles *xlsxStyleSheet) *xlsxW
 		if row.OutlineLevel > maxLevelRow {
 			maxLevelRow = row.OutlineLevel
 		}
+		xRow.Hidden = row.Hidden
 		for c, cell := range row.Cells {
 			XfId := colsXfIdList[c]
 
